@@ -3,9 +3,13 @@ version: '3.9'
 services:
   app:
     image: silvadias/dolibarr.dev
+    container_name: dolibarrWebSistem
     volumes:
       - ./htdocs:/var/www/html
     ports:
       - "80:80"
     networks:
       - dolibarrNetwork
+
+networks:
+  dolibarrNetwork:
